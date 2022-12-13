@@ -3,7 +3,7 @@ import Header from '../header/Header';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div data-testid='layout'>
       <Head>
         <title>Hide and Seek Game</title>
         <meta name='description' content='Hide and Seek game' />
