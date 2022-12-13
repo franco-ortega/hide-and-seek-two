@@ -1,7 +1,6 @@
 const Home = () => {
   return (
     <div data-testid='home'>
-      <h1>Hide & Seek</h1>
       <p>Welcome to the game.</p>
       <form action=''>
         <label htmlFor='human-players'>

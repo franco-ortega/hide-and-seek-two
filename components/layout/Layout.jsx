@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '../header/Header';
 
 const Layout = ({ children }) => {
   return (
@@ -8,9 +9,7 @@ const Layout = ({ children }) => {
         <meta name='description' content='Hide and Seek game' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header>
-        <h1>Hide and Seek</h1>
-      </header>
+      <Header />
       <main>{children}</main>;
     </div>
   );
