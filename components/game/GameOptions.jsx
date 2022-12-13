@@ -5,6 +5,17 @@ const GameOptions = () => {
     e.preventDefault();
 
     console.log('Play the game!');
+    console.log(e.target[0].value);
+    console.log(e.target.humans.value);
+    console.log(e.target.bots.value);
+    console.log(e.target.difficulty.value);
+    console.log(e.target.duration.value);
+
+    // get info from inputs and selects
+    // store difficulty and duration in state
+    // prompt user to provide names for human players
+    // generate player list
+    // proceed to game
   };
 
   return (
@@ -17,11 +28,16 @@ const GameOptions = () => {
       <p>Select the number of Players:</p>
       <label htmlFor='human-players'>
         Humans
-        <input type='number' id='human-players' defaultValue={0} />
+        <input
+          type='number'
+          id='human-players'
+          name='humans'
+          defaultValue={0}
+        />
       </label>
       <label htmlFor='bot-players'>
         Bots
-        <input type='number' id='bot-players' defaultValue={0} />
+        <input type='number' id='bot-players' name='bots' defaultValue={0} />
       </label>
       <label htmlFor='difficulty'>
         <p>Select the Difficulty:</p>
@@ -41,7 +57,7 @@ const GameOptions = () => {
           <option value='7'>7 rounds</option>
         </select>
       </label>
-      <button>Play Game</button>
+      <button>Proceed</button>
     </form>
   );
 };
