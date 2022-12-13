@@ -1,7 +1,8 @@
+import styles from './Home.module.scss';
+
 const Home = () => {
   return (
-    <div data-testid='home'>
-      <h1>Hide & Seek</h1>
+    <div data-testid='home' className={styles.Home}>
       <p>Welcome to the game.</p>
       <form action=''>
         <label htmlFor='human-players'>
