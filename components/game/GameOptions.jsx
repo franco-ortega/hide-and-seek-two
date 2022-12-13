@@ -1,4 +1,5 @@
 import { useGameContext } from '../../state/GameContext';
+import createPlayers from '../../utils/createPlayers';
 import styles from './GameOptions.module.scss';
 
 const GameOptions = () => {
@@ -9,16 +10,18 @@ const GameOptions = () => {
     console.log('Play the game!');
 
     // get info from inputs
-    console.log(e.target.humans.value);
-    console.log(e.target.bots.value);
+    const humans = Number(e.target.humans.value);
+    const bots = Number(e.target.bots.value);
+
+    // generate player list
+    const newPlayers = createPlayers(humans, bots);
+    console.log({ newPlayers });
 
     // store difficulty and duration in state
     setDifficulty(e.target.difficulty.value);
     setDuration(e.target.duration.value);
 
     // prompt user to provide names for human players
-
-    // generate player list
 
     // proceed to game
   };
