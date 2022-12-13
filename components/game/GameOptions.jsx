@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useGameContext } from '../../state/GameContext';
 import createPlayers from '../../utils/createPlayers';
 import styles from './GameOptions.module.scss';
 
 const GameOptions = () => {
   const { setDifficulty, setDuration } = useGameContext();
+  const [namePlayers, setNamePlayers] = useState(false);
 
   const onPlayGameSubmit = (e) => {
     e.preventDefault();
@@ -21,10 +23,14 @@ const GameOptions = () => {
     setDifficulty(e.target.difficulty.value);
     setDuration(e.target.duration.value);
 
+    if (humans) setNamePlayers(true);
+
     // prompt user to provide names for human players
 
     // proceed to game
   };
+
+  console.log(namePlayers);
 
   return (
     <form
@@ -32,6 +38,7 @@ const GameOptions = () => {
       className={styles.GameOptions}
       onSubmit={onPlayGameSubmit}
     >
+      {namePlayers && <div>Name the Players</div>}
       <h2>Game Options</h2>
       <p>Select the number of Players:</p>
       <label htmlFor='human-players'>
