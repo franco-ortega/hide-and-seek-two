@@ -1,5 +1,11 @@
+import styles from './GameOptions.module.scss';
+
 const GameOptions = () => {
-  return <div data-testid='game-options'>GameOptions</div>;
+  return (
+    <form data-testid='game-options' className={styles.GameOptions}>
+      GameOptions
+    </form>
+  );
 };
 
 export default GameOptions;

@@ -1,3 +1,4 @@
+import GameOptions from '../game/GameOptions';
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
         </select>
         <button>Proceed</button>
       </form>
+      <GameOptions />
     </div>
   );
 };
