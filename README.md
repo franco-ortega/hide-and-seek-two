@@ -26,6 +26,7 @@
          1. 5 rounds
          1. 10 rounds
          1. 15 rounds
+      1. Error handling to ensure all fields are filled out
 2. Enter Names of Human Players
 3. Play
    1. Play Area
