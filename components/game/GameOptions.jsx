@@ -1,20 +1,25 @@
+import { useGameContext } from '../../state/GameContext';
 import styles from './GameOptions.module.scss';
 
 const GameOptions = () => {
+  const { setDifficulty, setDuration } = useGameContext();
+
   const onPlayGameSubmit = (e) => {
     e.preventDefault();
-
     console.log('Play the game!');
-    console.log(e.target[0].value);
+
+    // get info from inputs
     console.log(e.target.humans.value);
     console.log(e.target.bots.value);
-    console.log(e.target.difficulty.value);
-    console.log(e.target.duration.value);
 
-    // get info from inputs and selects
     // store difficulty and duration in state
+    setDifficulty(e.target.difficulty.value);
+    setDuration(e.target.duration.value);
+
     // prompt user to provide names for human players
+
     // generate player list
+
     // proceed to game
   };
 
