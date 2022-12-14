@@ -26,11 +26,7 @@ const GameOptions = () => {
 
     // prompt user to provide names for human players
     if (humans) setNamePlayers(true);
-
-    // proceed to game
   };
-
-  console.log(namePlayers);
 
   return (
     <>

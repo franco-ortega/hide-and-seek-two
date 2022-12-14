@@ -1,9 +1,11 @@
+import { useRouter } from 'next/router';
 import { useGameContext } from '../../state/GameContext';
 import addPlayerNames from '../../utils/addPlayerNames';
 import styles from './NamePlayers.module.scss';
 
 const NamePlayers = ({ setNamePlayers }) => {
   const { players, setPlayers } = useGameContext();
+  const router = useRouter();
 
   // create text input for each human player to enter their name
   const humanPlayers = players
@@ -26,7 +28,10 @@ const NamePlayers = ({ setNamePlayers }) => {
     setNamePlayers(false);
 
     // proceed to game page
+    router.push('/play');
   };
+
+  console.log(players);
 
   return (
     <div data-testid='name-players' className={styles.NamePlayers}>
