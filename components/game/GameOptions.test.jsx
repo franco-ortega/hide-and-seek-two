@@ -1,16 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import { GameProvider } from '../../state/GameContext';
-import Home from './Home';
+import GameOptions from './GameOptions';
 
-describe('Home component tests', () => {
-  it('renders Home component', () => {
+describe('GameOptions component tests', () => {
+  it('renders GameOptions component', () => {
     render(
       <GameProvider>
-        <Home />
+        <GameOptions />
       </GameProvider>
     );
 
-    const element = screen.getByTestId('home');
+    const element = screen.getByTestId('game-options');
 
     expect(element).toBeInTheDocument();
   });

@@ -1,0 +1,19 @@
+.GameOptions {
+  background-color: gray;
+  color: yellow;
+
+  & > * {
+    outline: rgb(225, 126, 225) 1px dashed;
+  }
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+
+  label {
+    background-color: pink;
+  }
+}

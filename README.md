@@ -26,9 +26,12 @@
          1. 5 rounds
          1. 10 rounds
          1. 15 rounds
-2. Enter Names of Human Players
-3. Play
+      1. Error handling to ensure all fields are filled out
+1. Names
+   1. Enter names of Human Players
+   1. Generate names of Bot Players
+1. Play
    1. Play Area
    1. Scoreboard
-4. Results
+1. Results
    1. List of Player Scores with dates

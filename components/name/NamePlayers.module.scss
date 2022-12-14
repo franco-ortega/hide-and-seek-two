@@ -1,0 +1,21 @@
+.NamePlayers {
+  background-color: red;
+  border: 0.25rem solid black;
+  border-radius: 0.25rem;
+
+  padding: 0.5rem;
+
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  form {
+    background-color: aliceblue;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
