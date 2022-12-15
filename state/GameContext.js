@@ -3,11 +3,7 @@ import { createContext, useContext, useState } from 'react';
 const GameContext = createContext();
 
 export const GameProvider = ({ children }) => {
-  const [players, setPlayers] = useState([]);
-  // list of player objects:
-  // human is { type: 'human', name: '', score: 0 }
-  // bot is { type: 'bot', name: '', score: 0 }
-  // or
+  const [players, setPlayers] = useState([]); // list of player objects:
   // human is { human: true, name: '', score: 0 }
   // bot is { human: false, name: '', score: 0 }
 
