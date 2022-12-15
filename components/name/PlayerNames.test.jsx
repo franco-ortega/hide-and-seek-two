@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { useRouter } from 'next/router';
 import { GameProvider } from '../../state/GameContext';
-import NamePlayers from './NamePlayers';
+import PlayerNames from './PlayerNames';
 
 // mock useRouter
 jest.mock('next/router', () => ({
@@ -19,11 +19,11 @@ useRouter.mockReturnValue({
   // ... add the props or methods you need
 });
 
-describe('NamePlayers component tests', () => {
-  it('renders NamePlayers component', () => {
+describe('PlayerNames component tests', () => {
+  it('renders PlayerNames component', () => {
     render(
       <GameProvider>
-        <NamePlayers />
+        <PlayerNames />
       </GameProvider>
     );
 
