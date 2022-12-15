@@ -1,9 +1,9 @@
 .GameOptions {
-  background-color: gray;
-  color: yellow;
+  background-color: hsl(240, 77%, 43%);
+  color: rgb(239, 239, 120);
 
   & > * {
-    outline: rgb(225, 126, 225) 1px dashed;
+    outline: rgb(225, 126, 225) 1px solid;
   }
 
   position: relative;
@@ -14,6 +14,6 @@
   align-items: flex-start;
 
   label {
-    background-color: pink;
+    background-color: hsl(240, 77%, 20%);
   }
 }

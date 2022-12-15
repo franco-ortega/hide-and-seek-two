@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { useGameContext } from '../../state/GameContext';
 import createPlayers from '../../utils/createPlayers';
 import styles from './GameOptions.module.scss';
-import NamePlayers from '../name/NamePlayers';
+import PlayerNames from '../name/PlayerNames';
 
 const GameOptions = () => {
   const { setDifficulty, setDuration, setPlayers } = useGameContext();
-  const [namePlayers, setNamePlayers] = useState(false);
+  const [playerNames, setPlayerNames] = useState(false);
 
   const onPlayGameSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const GameOptions = () => {
     setDuration(e.target.duration.value);
 
     // prompt user to provide names for human players
-    if (humans) setNamePlayers(true);
+    if (humans) setPlayerNames(true);
   };
 
   return (
@@ -70,7 +70,7 @@ const GameOptions = () => {
         </label>
         <button>Proceed</button>
       </form>
-      {namePlayers && <NamePlayers setNamePlayers={setNamePlayers} />}
+      {playerNames && <PlayerNames setPlayerNames={setPlayerNames} />}
     </>
   );
 };

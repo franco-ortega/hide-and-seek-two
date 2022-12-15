@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { useGameContext } from '../../state/GameContext';
 import addPlayerNames from '../../utils/addPlayerNames';
-import styles from './NamePlayers.module.scss';
+import styles from './PlayerNames.module.scss';
 
-const NamePlayers = ({ setNamePlayers }) => {
+const PlayerNames = ({ setPlayerNames }) => {
   const { players, setPlayers } = useGameContext();
   const router = useRouter();
 
@@ -25,7 +25,7 @@ const NamePlayers = ({ setNamePlayers }) => {
   const onNamesSubmit = (e) => {
     e.preventDefault();
     setPlayers((prevState) => addPlayerNames(prevState, e));
-    setNamePlayers(false);
+    setPlayerNames(false);
 
     // proceed to game page
     router.push('/play');
@@ -34,7 +34,7 @@ const NamePlayers = ({ setNamePlayers }) => {
   console.log(players);
 
   return (
-    <div data-testid='name-players' className={styles.NamePlayers}>
+    <div data-testid='name-players' className={styles.PlayerNames}>
       <h3>Enter Names for Human Players</h3>
       <form onSubmit={onNamesSubmit}>
         {humanPlayers}
@@ -44,4 +44,4 @@ const NamePlayers = ({ setNamePlayers }) => {
   );
 };
 
-export default NamePlayers;
+export default PlayerNames;
