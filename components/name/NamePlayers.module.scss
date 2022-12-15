@@ -1,6 +1,6 @@
 .NamePlayers {
-  background-color: red;
-  border: 0.25rem solid black;
+  background-color: hsl(0, 100%, 50%);
+  border: 0.25rem solid hsl(0, 50%, 30%);
   border-radius: 0.25rem;
 
   padding: 0.5rem;
@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
 
   form {
-    background-color: aliceblue;
+    background-color: hsl(0, 100%, 80%);
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
