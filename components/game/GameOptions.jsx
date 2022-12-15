@@ -36,22 +36,32 @@ const GameOptions = () => {
         onSubmit={onPlayGameSubmit}
       >
         <h2>Game Options</h2>
-        <p>Select the number of Players:</p>
-        <label htmlFor='human-players'>
-          Humans
-          <input
-            type='number'
-            id='human-players'
-            name='humans'
-            defaultValue={0}
-          />
-        </label>
-        <label htmlFor='bot-players'>
-          Bots
-          <input type='number' id='bot-players' name='bots' defaultValue={0} />
-        </label>
+        <div>
+          <p>Select the number of Players:</p>
+          <label htmlFor='human-players'>
+            Humans
+            <input
+              type='number'
+              id='human-players'
+              name='humans'
+              // defaultValue={0}
+              placeholder='Humans'
+            />
+          </label>
+          <label htmlFor='bot-players'>
+            Bots
+            <input
+              type='number'
+              id='bot-players'
+              name='bots'
+              // defaultValue={0}
+              placeholder='Bots'
+            />
+          </label>
+        </div>
+
         <label htmlFor='difficulty'>
-          <p>Select the Difficulty:</p>
+          <p>Difficulty</p>
           <select name='difficulty' id='difficulty'>
             <option value=''></option>
             <option value='easy'>Easy</option>
@@ -60,7 +70,7 @@ const GameOptions = () => {
           </select>
         </label>
         <label htmlFor='duration'>
-          <p>Select the Duration:</p>
+          <p> Duration</p>
           <select name='duration' id='duration'>
             <option value=''></option>
             <option value='3'>3 rounds</option>
@@ -68,6 +78,7 @@ const GameOptions = () => {
             <option value='7'>7 rounds</option>
           </select>
         </label>
+
         <button>Proceed</button>
       </form>
       {playerNames && <PlayerNames setPlayerNames={setPlayerNames} />}

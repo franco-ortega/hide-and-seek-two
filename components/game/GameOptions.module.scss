@@ -10,10 +10,14 @@
 
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: flex-start;
 
   label {
     background-color: hsl(240, 77%, 20%);
+
+    input {
+      width: 5rem;
+    }
   }
 }
