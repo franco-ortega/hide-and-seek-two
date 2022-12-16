@@ -8,7 +8,7 @@ const HidingSpot = () => {
   return (
     <button
       className={styles.HidingSpot}
-      data-testid='spot'
+      data-testid='hiding-spot'
       onClick={onSpotClick}
     >
       O

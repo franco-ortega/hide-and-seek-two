@@ -10,7 +10,7 @@ describe('HidingSpot component tests', () => {
       </GameProvider>
     );
 
-    const element = screen.getByTestId('spot');
+    const element = screen.getByTestId('hiding-spot');
 
     expect(element).toBeInTheDocument();
   });

@@ -1,4 +1,4 @@
-import HidingSpot from '../hidingSpot/HidingSpot';
+import HidingSpotList from '../hidingSpot/HidingSpotList';
 import styles from './Game.module.scss';
 
 const Game = () => {
@@ -43,11 +43,7 @@ const Game = () => {
       <div>PLAYER THREE did not find the item</div>
       <div>PLAYER THREE hide the item for PLAYER ONE</div>
       <div>PLAYER ONE found the item!</div>
-      <div>
-        <HidingSpot />
-        <HidingSpot />
-        <HidingSpot />
-      </div>
+      <HidingSpotList />
     </div>
   );
 };
