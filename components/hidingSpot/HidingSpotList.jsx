@@ -12,11 +12,11 @@ const HidingSpotList = () => {
     difficulty === 'easy' ? 3 : difficulty === 'medium' ? 4 : 5;
 
   return (
-    <div className={styles.HidingSpotList} data-testid='hiding-spot-list'>
+    <ul className={styles.HidingSpotList} data-testid='hiding-spot-list'>
       <HidingSpot />
       <HidingSpot />
       <HidingSpot />
-    </div>
+    </ul>
   );
 };
 
