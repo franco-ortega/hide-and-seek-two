@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { GameProvider } from '../../state/GameContext';
-import Spot from './Spot';
+import HidingSpot from './HidingSpot';
 
-describe('Spot component tests', () => {
-  it('renders Spot component', () => {
+describe('HidingSpot component tests', () => {
+  it('renders HidingSpot component', () => {
     render(
       <GameProvider>
-        <Spot />
+        <HidingSpot />
       </GameProvider>
     );
 
