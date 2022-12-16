@@ -2,7 +2,7 @@ import styles from './HidingSpot.module.scss';
 
 const HidingSpot = ({ location }) => {
   const onSpotClick = () => {
-    console.log('spot clicked!');
+    console.log('spot clicked:', location);
   };
 
   return (

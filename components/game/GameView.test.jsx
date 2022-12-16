@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { GameProvider } from '../../state/GameContext';
-import GamePlay from './GamePlay';
+import GameView from './GameView';
 
-describe('GamePlay component tests', () => {
-  it('renders GamePlay component', () => {
+describe('GameView component tests', () => {
+  it('renders GameView component', () => {
     render(
       <GameProvider>
-        <GamePlay />
+        <GameView />
       </GameProvider>
     );
 
