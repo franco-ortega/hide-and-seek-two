@@ -10,6 +10,21 @@ const Game = () => {
 
   const { players } = useGameContext();
 
+  const hideItem = (location) => {
+    setHidingSpot(location);
+    setHide((prevState) => !prevState);
+    setActivePlayer((prevState) => {
+      if (hide && activePlayer >= players.length - 1) {
+        prevState = 0;
+        return prevState;
+      } else if (hide) {
+        return prevState + 1;
+      }
+
+      return prevState;
+    });
+  };
+
   // round tracker
   // message display area for instructions and results
   // play area with hiding spots
@@ -54,10 +69,12 @@ const Game = () => {
       <p>Hiding Spot: {hidingSpot}</p>
       <p>Status: {hide ? 'Hide Item' : 'Seek Item'}</p>
       <p>
-        Active Player: {players[activePlayer].playerOrder} -{' '}
-        {players[activePlayer].name}
+        Active Player {'('}
+        {activePlayer}
+        {')'}: {players[activePlayer]?.playerOrder} -{' '}
+        {players[activePlayer]?.name}
       </p>
-      <HidingSpotList />
+      <HidingSpotList hideItem={hideItem} />
     </div>
   );
 };

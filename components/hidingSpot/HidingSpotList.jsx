@@ -2,7 +2,7 @@ import { useGameContext } from '../../state/GameContext';
 import HidingSpot from './HidingSpot';
 import styles from './HidingSpotList.module.scss';
 
-const HidingSpotList = () => {
+const HidingSpotList = ({ hideItem }) => {
   const { difficulty } = useGameContext();
 
   // easy = 3 spots
@@ -16,7 +16,7 @@ const HidingSpotList = () => {
   for (let i = 0; i < hidingSpotCount; i++) {
     hidingSpots.push(
       <li key={i}>
-        <HidingSpot location={i + 1} />
+        <HidingSpot hideItem={hideItem} location={i + 1} />
       </li>
     );
   }

@@ -1,8 +1,9 @@
 import styles from './HidingSpot.module.scss';
 
-const HidingSpot = ({ location }) => {
+const HidingSpot = ({ hideItem, location }) => {
   const onSpotClick = () => {
     console.log('spot clicked:', location);
+    hideItem(location);
   };
 
   return (
