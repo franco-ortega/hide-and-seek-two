@@ -1,6 +1,6 @@
 import styles from './HidingSpot.module.scss';
 
-const HidingSpot = () => {
+const HidingSpot = ({ location }) => {
   const onSpotClick = () => {
     console.log('spot clicked!');
   };
@@ -10,7 +10,9 @@ const HidingSpot = () => {
       className={styles.HidingSpot}
       data-testid='hiding-spot'
       onClick={onSpotClick}
-    ></button>
+    >
+      {location}
+    </button>
   );
 };
 

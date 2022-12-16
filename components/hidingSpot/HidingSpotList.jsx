@@ -16,7 +16,7 @@ const HidingSpotList = () => {
   for (let i = 0; i < hidingSpotCount; i++) {
     hidingSpots.push(
       <li key={i}>
-        <HidingSpot />
+        <HidingSpot location={i + 1} />
       </li>
     );
   }
