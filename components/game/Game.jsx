@@ -1,7 +1,15 @@
+import { useState } from 'react';
+import { useGameContext } from '../../state/GameContext';
 import HidingSpotList from '../hidingSpot/HidingSpotList';
 import styles from './Game.module.scss';
 
 const Game = () => {
+  const [hide, setHide] = useState(true);
+  const [hidingSpot, setHidingSpot] = useState(0);
+  const [activePlayer, setActivePlayer] = useState(0);
+
+  const { players } = useGameContext();
+
   // round tracker
   // message display area for instructions and results
   // play area with hiding spots
@@ -43,6 +51,12 @@ const Game = () => {
       <div>PLAYER THREE did not find the item</div>
       <div>PLAYER THREE hide the item for PLAYER ONE</div>
       <div>PLAYER ONE found the item!</div>
+      <p>Hiding Spot: {hidingSpot}</p>
+      <p>Status: {hide ? 'Hide Item' : 'Seek Item'}</p>
+      <p>
+        Active Player: {players[activePlayer].playerOrder} -{' '}
+        {players[activePlayer].name}
+      </p>
       <HidingSpotList />
     </div>
   );
