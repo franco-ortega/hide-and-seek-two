@@ -18,7 +18,7 @@
         "after": true,
         "overrides": {
           "do": { "after": false },
-          "for": { "after": false },
+          "for": { "after": true },
           "if": { "after": true },
           "switch": { "after": false },
           "while": { "after": true },

@@ -11,11 +11,19 @@ const HidingSpotList = () => {
   const hidingSpotCount =
     difficulty === 'easy' ? 3 : difficulty === 'medium' ? 4 : 5;
 
+  const hidingSpots = [];
+
+  for (let i = 0; i < hidingSpotCount; i++) {
+    hidingSpots.push(
+      <li key={i}>
+        <HidingSpot />
+      </li>
+    );
+  }
+
   return (
     <ul className={styles.HidingSpotList} data-testid='hiding-spot-list'>
-      <HidingSpot />
-      <HidingSpot />
-      <HidingSpot />
+      {hidingSpots}
     </ul>
   );
 };
