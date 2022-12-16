@@ -1,18 +1,5 @@
-import { useGameContext } from '../state/GameContext';
+import GamePlay from '../components/game/GamePlay';
 
-export default function PlayPage() {
-  const { players } = useGameContext();
-
-  return (
-    <div>
-      <h3>Play Game</h3>
-      <ul>
-        {players.map((player) => (
-          <li key={player.playerOrder}>
-            {player.name} - Score: {player.score}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+export default function PlayGame() {
+  return <GamePlay />;
 }

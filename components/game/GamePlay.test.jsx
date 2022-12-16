@@ -10,7 +10,7 @@ describe('GamePlay component tests', () => {
       </GameProvider>
     );
 
-    const element = screen.getByTestId('game-options');
+    const element = screen.getByTestId('game-play');
 
     expect(element).toBeInTheDocument();
   });
