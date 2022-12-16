@@ -60,12 +60,24 @@ const Game = () => {
   return (
     <div className={styles.Game} data-testid='game'>
       <h3>Round 1</h3>
-      <div>PLAYER ONE hide the item for PLAYER TWO</div>
-      <div>PLAYER TWO found the item!</div>
-      <div>PLAYER TWO hide the item for PLAYER THREE</div>
-      <div>PLAYER THREE did not find the item</div>
-      <div>PLAYER THREE hide the item for PLAYER ONE</div>
-      <div>PLAYER ONE found the item!</div>
+      {hide ? (
+        <div>
+          {players[activePlayer]?.name} is HIDING the item from{' '}
+          {activePlayer < players.length - 1
+            ? players[activePlayer + 1]?.name
+            : players[0]?.name}
+        </div>
+      ) : (
+        <div>
+          {players[activePlayer]?.name} is SEEKING the item hidden by{' '}
+          {activePlayer < players.length
+            ? activePlayer > 0
+              ? players[activePlayer - 1]?.name
+              : players[players.length - 1]?.name
+            : players[0]?.name}
+        </div>
+      )}
+
       <p>Hiding Spot: {hidingSpot}</p>
       <p>Status: {hide ? 'Hide Item' : 'Seek Item'}</p>
       <p>
