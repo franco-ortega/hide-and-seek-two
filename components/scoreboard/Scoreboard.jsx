@@ -1,4 +1,5 @@
 import { useGameContext } from '../../state/GameContext';
+import Score from './Score';
 import styles from './Scoreboard.module.scss';
 
 const Scoreboard = () => {
@@ -10,9 +11,11 @@ const Scoreboard = () => {
       <div>Duration: {duration} rounds</div>
       <ul>
         {players.map((player) => (
-          <li key={player.playerOrder}>
-            {player.name} - Score: {player.score}
-          </li>
+          <Score
+            key={player.playerOrder}
+            player={player.name}
+            score={player.score}
+          />
         ))}
       </ul>
     </div>
