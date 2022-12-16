@@ -10,9 +10,7 @@ const HidingSpot = () => {
       className={styles.HidingSpot}
       data-testid='hiding-spot'
       onClick={onSpotClick}
-    >
-      O
-    </button>
+    ></button>
   );
 };
 
