@@ -1,3 +1,4 @@
+import Spot from '../spot/Spot';
 import styles from './Game.module.scss';
 
 const Game = () => {
@@ -43,9 +44,9 @@ const Game = () => {
       <div>PLAYER THREE hide the item for PLAYER ONE</div>
       <div>PLAYER ONE found the item!</div>
       <div>
-        <div>O</div>
-        <div>O</div>
-        <div>O</div>
+        <Spot />
+        <Spot />
+        <Spot />
       </div>
     </div>
   );
